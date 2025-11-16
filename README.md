@@ -1,0 +1,89 @@
+# 📦 Data Warehouse Project
+
+This repository contains two versions of a data warehouse implementation for a fictional business use case.  
+Both follow the same business logic and data model, but use different platforms.
+
+---
+
+## 🚀 Available Versions
+
+| Version | Technology Stack | Branch Name | Status |
+|--------|------------------|-------------|--------|
+| **v1** | SQL Server + SSIS | `sqlserver_v1` | ✔ Completed |
+| **v2** | Snowflake + Tasks + Stored Procedures | `snowflake_v2` | ✔ Completed |
+
+---
+
+## 🏗️ Architecture
+
+Both implementations are built using a **Medallion Architecture**:
+
+Bronze → Silver → Gold
+
+
+| Layer | Description |
+|-------|------------|
+| **Bronze** | Raw data ingestion (no transformations) |
+| **Silver** | Cleaned, validated, standardized data |
+| **Gold** | Business-ready tables, facts, dimensions |
+
+---
+## 🧱 Architecture Overview
+
+Both implementations follow the Medallion Architecture pattern:
+
+    ┌──────────────┐
+    │   Bronze     │  (Raw Data)
+    └───────┬──────┘
+            │
+            ▼
+    ┌──────────────┐
+    │   Silver     │  (Cleaned + Standardized)
+    └───────┬──────┘
+            │
+            ▼
+    ┌──────────────┐
+    │    Gold      │ (Analytics Models: Facts + Dimensions)
+    └──────────────┘
+    
+## 📂 Repository Structure
+
+
+
+📁 dwh-project
+
+ ├── README.md
+ 
+ ├── sqlserver_v1/        ← SQL Server Implementation
+ 
+ └── snowflake_v2/        ← Snowflake Implementation
+
+
+
+---
+
+## 🔧 How to Work with the Repo
+
+### Clone the repository:
+
+```sh
+git clone https://github.com/chathumiamarasinghe/dwh-project.git
+
+Switch to a version:
+git checkout sqlserver_v1
+
+```
+
+or
+```
+git checkout snowflake_v2
+
+```
+
+## 🧪 Data Sources Used
+
+1. CRM system (Customer details)
+
+2. Sales dataset
+
+3. Product master data
