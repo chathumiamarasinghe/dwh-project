@@ -87,3 +87,30 @@ git checkout snowflake_v2
 2. Sales dataset
 
 3. Product master data
+
+## ▶️ Running the Pipeline
+
+1️⃣ Start Airflow
+```sql
+ docker compose up -d
+```
+2️⃣ Confirm DAGs are detected
+```sql
+airflow dags list
+```
+
+Expected:
+
+bronze_layer_load
+
+silver_layer_load
+
+gold_layer_load
+
+full_etl_pipeline
+
+3️⃣ Trigger Pipeline Manually
+```sql
+airflow dags trigger full_etl_pipeline
+```
+<img width="1894" height="979" alt="image" src="https://github.com/user-attachments/assets/297934e9-1df1-48b3-83df-ef45725d46da" />
