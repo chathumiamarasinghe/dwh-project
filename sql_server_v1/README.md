@@ -17,8 +17,7 @@ This solution follows a **Medallion Architecture**:
 
 Bronze (Staging) → Silver (Cleansed) → Gold (Analytics)
 
-yaml
-Copy code
+
 
 | Layer | Tools Used | Purpose |
 |-------|-----------|---------|
@@ -45,12 +44,11 @@ Copy code
 3. Configure connection managers.
 4. Execute SQL Agent Job or run manually:
 
-```sql
+```
 EXEC load_bronze;
 EXEC load_silver;
 📁 Folder Structure
-graphql
-Copy code
+
 sqlserver_v1
  ├─ schema/
  ├─ bronze/
